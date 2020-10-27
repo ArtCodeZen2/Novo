@@ -9,13 +9,13 @@ public class Reservation {
 	private Date checkIn;
 	private Date checkOut;
 	
-	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyy");
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	// método construtor
 	public Reservation() {
 		
 	}
 	public Reservation(Integer roomNumber, Date checkIn, Date checkOut) {
-		
+		System.out.println("Construtor");
 		this.roomNumber = roomNumber;
 		this.checkIn = checkIn;
 		this.checkOut = checkOut;
@@ -43,14 +43,16 @@ public class Reservation {
 	}
 	@Override
 	public String toString() {
+		
 		return "Room "
 				+ roomNumber
-				+ ", check-in"
+				+ ", check-in: "
 				+ sdf.format(checkIn)
-				+ sdf.format(", check-out: ")
+				+", check-out: "
 				+ sdf.format(checkOut)
 				+ ","
 				+ duration() 
 				+ " nights";
+	
 	}
 }
