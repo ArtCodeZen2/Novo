@@ -29,7 +29,7 @@ public class Program {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}catch (RuntimeException e) {
-			System.out.println("Unexpected Error");
+			System.out.println("Error!");
 		}
 		
 	}
